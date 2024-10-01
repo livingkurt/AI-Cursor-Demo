@@ -3,10 +3,16 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#FE6B8B",
+      main: "#3a3c7a",
     },
     secondary: {
       main: "#FF8E53",
+    },
+    background: {
+      default: "#262852",
+    },
+    text: {
+      primary: "#000",
     },
   },
   typography: {
@@ -22,8 +28,8 @@ const theme = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: {
-          backgroundImage: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
-          color: "#ffffff",
+          backgroundColor: "#fff",
+          color: "#000",
         },
       },
     },
