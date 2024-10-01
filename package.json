@@ -1,0 +1,58 @@
+{
+  "name": "app",
+  "private": true,
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/plugin-transform-runtime": "7",
+    "@babel/runtime": "7",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.1",
+    "@rails/activestorage": "^7.2.100",
+    "@rails/ujs": "^7.1.3-4",
+    "@rails/webpacker": "^6.0.0-rc.6",
+    "@types/babel__core": "7",
+    "@types/webpack": "5",
+    "compression-webpack-plugin": "9",
+    "core-js": "^3.38.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "regenerator-runtime": "^0.14.1",
+    "shakapacker": "7.2.3",
+    "terser-webpack-plugin": "5",
+    "turbolinks": "^5.2.0",
+    "webpack": "5",
+    "webpack-assets-manifest": "5",
+    "webpack-cli": "4",
+    "webpack-merge": "5"
+  },
+  "version": "0.1.0",
+  "babel": {
+    "presets": [
+      "./node_modules/shakapacker/package/babel/preset.js"
+    ]
+  },
+  "scripts": {
+    "build": "shakapacker",
+    "start": "bin/shakapacker-dev-server",
+    "test": "jest"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "babel-jest": "^27.5.1",
+    "babel-loader": "^9.2.1",
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "babel-plugin-macros": "^3.1.0",
+    "jest": "^27.5.1",
+    "react-test-renderer": "^18.3.1",
+    "webpack-dev-server": "4"
+  }
+}
