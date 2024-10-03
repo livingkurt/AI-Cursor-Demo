@@ -18,12 +18,14 @@ import {
   Assignment,
   ArrowForward,
 } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const adminFeatures = [
   {
     title: "User Management",
     icon: <People />,
     description: "Manage user accounts and permissions",
+    link: "/users",
   },
   {
     title: "Content Editor",
@@ -164,6 +166,8 @@ const HomePage = () => {
                       {feature.description}
                     </Typography>
                     <Button
+                      component={Link}
+                      to={feature.link}
                       variant="text"
                       color="primary"
                       endIcon={<ArrowForward />}
