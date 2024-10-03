@@ -16,6 +16,7 @@ import {
 } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../theme";
+import { getCSRFToken } from "../helpers";
 
 const UsersPage = () => {
   const [users, setUsers] = useState([]);
@@ -53,6 +54,7 @@ const UsersPage = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "X-CSRF-Token": getCSRFToken(),
       },
       body: JSON.stringify({ user: newUser }),
     });
@@ -68,6 +70,7 @@ const UsersPage = () => {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
+        "X-CSRF-Token": getCSRFToken(),
       },
       body: JSON.stringify({ user: editingUser }),
     });
@@ -143,7 +146,6 @@ const UsersPage = () => {
                       editingUser ? handleEditInputChange : handleInputChange
                     }
                     margin="normal"
-                    required
                   />
                   <Button
                     type="submit"
